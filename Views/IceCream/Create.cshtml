@@ -1,0 +1,23 @@
+﻿@model S1.Models.IceCream
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create a new Ice Cream</h2>
+
+<form method="post" asp-action="Create">
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <label asp-for="Flavour"></label><br />
+    <input asp-for="Flavour" />
+
+    <span asp-validation-for="Flavour" class="text-danger"></span>
+
+    <input type="submit" value="Create" />
+    <a asp-action="Index">Back to flavour list</a>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

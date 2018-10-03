@@ -1,0 +1,25 @@
+﻿@model S1.Models.MenuModelView
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Menu</h2>
+
+<h3>Pizza</h3>
+<p>
+    @foreach(Pizza pizza in Model.PizzaMV)
+    {
+        @pizza.NameOfPizza<br />
+    }
+</p>
+
+<hr />
+
+<h3>Ice Cream</h3>
+<p>
+    @foreach(IceCream iceCream in Model.IceCreamMV)
+    {
+        @iceCream.Flavour<br />
+    }
+</p>

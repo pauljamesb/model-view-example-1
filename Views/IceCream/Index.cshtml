@@ -1,0 +1,21 @@
+﻿@model  IEnumerable<S1.Models.IceCream>
+
+    @{
+        ViewData["Title"] = "Index";
+    }
+
+    <h2>The Ice Cream Index</h2>
+
+    <p>
+        <strong>
+            @Html.DisplayNameFor(m => m.Flavour)
+        </strong>
+    </p>
+
+    @foreach (var item in Model)
+    {
+        <p>
+            @Html.DisplayFor(m => item.Flavour)
+        </p>
+    }
+
